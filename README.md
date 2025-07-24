@@ -30,11 +30,16 @@ Este proyecto frontend permite consultar datos curiosos sobre gatos y acompañar
 ```
 src/
 ├── app/
-│ ├── services/ # Lógica para llamadas HTTP
-│ ├── interfaces/ # Modelos tipados de datos
-│ └── app.component.ts # Componente principal
+│ ├── app-routing.module.ts
+│ ├── app.component.*
+│ ├── app.module.ts
+├── models/ # Modelos tipados de datos
+├── services/ # Lógica para llamadas HTTP
 ├── assets/
-└── environments/ # Configuración de entornos
+├── environments/ # Configuración de entornos
+├── main.ts
+├── index.html
+├── styles.css
 ```
 
 ## ⚙️ Configuración local
