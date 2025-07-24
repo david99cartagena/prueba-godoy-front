@@ -38,10 +38,13 @@ src/
 ## ⚙️ Configuración local
 
 1. Clona el repositorio:
+
    ````bash
    git clone https://github.com/david99cartagena/prueba-godoy-front.git
    ```
+
    ````
+
 2. Instala las dependencias:
    ```bash
    npm install
