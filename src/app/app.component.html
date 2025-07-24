@@ -1,0 +1,79 @@
+<div class="container py-4">
+  <h1 class="text-center mb-4">Cat Fact & Gif App</h1>
+
+  <!-- Tabs -->
+  <ul class="nav nav-tabs mb-3 justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link" [class.active]="activeTab === 'actual'" (click)="activeTab = 'actual'" href="#">Actual</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [class.active]="activeTab === 'historial'" (click)="activeTab = 'historial'"
+        href="#">Historial</a>
+    </li>
+  </ul>
+
+  <!-- Actual Tab -->
+  <div *ngIf="activeTab === 'actual'" class="text-center">
+    <!-- Spinner -->
+    <div *ngIf="isLoading" class="d-flex justify-content-center mb-3">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Cargando...</span>
+      </div>
+    </div>
+
+    <!-- Error -->
+    <div *ngIf="errorMessage" class="alert alert-danger">
+      {{ errorMessage }}
+    </div>
+
+    <!-- Fact -->
+    <div *ngIf="!isLoading && catFact" class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Cat Fact</h5>
+        <p class="card-text">{{ catFact }}</p>
+      </div>
+    </div>
+
+    <!-- Gif -->
+    <div *ngIf="!isLoading && gifUrl">
+      <img [src]="gifUrl" class="img-fluid rounded" alt="Gif relacionado" />
+    </div>
+
+    <!-- Refresh Button -->
+    <button class="btn btn-primary mt-3" (click)="refreshGif()">
+      🔄 Cambiar gif
+    </button>
+  </div>
+
+  <!-- Historial Tab -->
+  <div *ngIf="activeTab === 'historial'">
+    <h5 class="mb-3">Historial de búsquedas</h5>
+
+    <div *ngIf="historial.length === 0" class="alert alert-info">
+      No hay búsquedas registradas aún.
+    </div>
+
+    <div class="table-responsive" *ngIf="historial.length > 0">
+      <table class="table table-bordered table-hover">
+        <thead class="table-light">
+          <tr>
+            <th>Fecha</th>
+            <th>Cat Fact</th>
+            <th>Tres palabras</th>
+            <th>Gif</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of historial">
+            <td>{{ item.fechaBusqueda }}</td>
+            <td>{{ item.factCompleto }}</td>
+            <td>{{ item.tresPalabrasQuery }}</td>
+            <td>
+              <img [src]="item.gifUrl" width="100" alt="Gif historial" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
