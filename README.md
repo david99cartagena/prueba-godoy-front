@@ -39,11 +39,9 @@ src/
 
 1. Clona el repositorio:
 
-   ````bash
+   ```bash
    git clone https://github.com/david99cartagena/prueba-godoy-front.git
    ```
-
-   ````
 
 2. Instala las dependencias:
    ```bash
