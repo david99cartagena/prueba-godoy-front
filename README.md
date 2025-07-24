@@ -67,7 +67,7 @@ src/
 ## 📸 Imagenes de la Aplicacion
 
 - **Actual**  
-  ![CatFact](https://raw.githubusercontent.com/david99cartagena/spoti-app-web/refs/heads/main/media/Screenshot_1.png)
+  ![CatFact](https://raw.githubusercontent.com/david99cartagena/prueba-godoy-front/refs/heads/main/media/Screenshot_1.png)
 
 - **Historial**  
-  ![CatFact](https://raw.githubusercontent.com/david99cartagena/spoti-app-web/refs/heads/main/media/Screenshot_2.png)
+  ![CatFact](https://raw.githubusercontent.com/david99cartagena/prueba-godoy-front/refs/heads/main/media/Screenshot_2.png)
