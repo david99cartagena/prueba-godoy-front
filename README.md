@@ -4,11 +4,13 @@ Este proyecto frontend permite consultar datos curiosos sobre gatos y acompañar
 
 ## 🚀 Tecnologías utilizadas
 
-- Angular 17
-- TypeScript
-- Bootstrap 5
-- RxJS
-- HTML5 + CSS3
+- **Node.js** - v16.20.2
+- **Angular** - v15.2.0
+- **Typescript** - v4.9.4
+- **Bootstrap 5**
+- **RxJS** - v7.8.0
+- **HTML5**
+- **CSS3**
 
 ## 🎯 Funcionalidad
 
